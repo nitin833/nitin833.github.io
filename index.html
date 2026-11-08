@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vempati Nitin – Backend & Full Stack Engineer</title>
+<meta name="description" content="Portfolio of Vempati Nitin: backend-focused software engineer building scalable web apps, real-time systems and AI tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f6;--surface:#fff;--ink:#14213d;--muted:#55627a;--line:#cfd8e3;--accent:#2f5bff;--warn:#e8590c;--ok:#12805c}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1726;--surface:#17223a;--ink:#e8eef9;--muted:#9aa8c2;--line:#2a3a5a;--accent:#7b9bff;--warn:#ff9b57;--ok:#4cc9a0}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;gap:1.25rem;justify-content:flex-end;padding:1.25rem 0;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--ink)}
+.hero{padding:3rem 0 2rem}
+.hero h1{font-size:clamp(2.6rem,8vw,5.5rem);font-weight:800;letter-spacing:-.03em}
+.hero p.lead{max-width:38rem;font-size:1.2rem;color:var(--muted);margin:1.25rem 0 1.5rem}
+.links{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.6rem 1.1rem;border-radius:.5rem;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:500}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+.stats{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:2rem;color:var(--muted)}
+.stats b{display:block;font:700 1.8rem "Bricolage Grotesque",sans-serif;color:var(--ink)}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:2rem;margin-bottom:1.5rem}
+/* latency demo */
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;padding:1.5rem}
+.demo h2{font-size:1.5rem;margin-bottom:.4rem}
+.demo p{margin:.2rem 0 1.2rem;color:var(--muted)}
+.toggle{display:inline-flex;border:1.5px solid var(--ink);border-radius:.5rem;overflow:hidden;margin-bottom:1.25rem}
+.toggle button{font:500 1rem "IBM Plex Sans",sans-serif;padding:.5rem 1rem;border:0;background:transparent;color:var(--ink);cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.track{height:2.2rem;background:var(--bg);border-radius:.35rem;overflow:hidden}
+.bar{height:100%;width:100%;background:var(--warn);transition:width .9s cubic-bezier(.2,.8,.2,1),background .3s}
+.bar.fast{background:var(--ok)}
+.readout{display:flex;justify-content:space-between;margin-top:.5rem;font-weight:500}
+@media(prefers-reduced-motion:reduce){.bar{transition:none}.btn:hover{transform:none}html{scroll-behavior:auto}}
+/* projects */
+.proj{display:grid;grid-template-columns:1fr;gap:.5rem;padding:1.75rem 0;border-bottom:1px solid var(--line)}
+.proj:first-of-type{padding-top:0}
+.proj h3{font-size:1.6rem}
+.proj .stack{color:var(--accent);font-weight:500;font-size:.95rem}
+.proj ul{margin:.5rem 0 .75rem;padding-left:1.1rem}
+.proj li{margin:.3rem 0;max-width:46rem}
+.proj .pl{display:flex;gap:1rem;flex-wrap:wrap}
+/* skills */
+dl{display:grid;grid-template-columns:1fr;gap:.25rem 2rem;margin:0}
+dt{font-weight:500;margin-top:.9rem}
+dd{margin:0;color:var(--muted)}
+@media(min-width:42rem){dl{grid-template-columns:12rem 1fr}dt{margin:0;padding:.55rem 0;border-bottom:1px solid var(--line)}dd{padding:.55rem 0;border-bottom:1px solid var(--line)}}
+.two{display:grid;gap:2rem}
+@media(min-width:42rem){.two{grid-template-columns:1fr 1fr}}
+.two h3{font-size:1.3rem;margin-bottom:.6rem}
+.two p,.two ul{margin:.25rem 0;color:var(--muted)}
+.two ul{padding-left:1.1rem}
+footer{padding:3rem 0 4rem;border-top:1px solid var(--line)}
+footer h2{font-size:2.2rem;margin-bottom:.75rem}
+footer p{color:var(--muted);margin:.25rem 0 1.25rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a href="#work">Projects</a><a href="#skills">Skills</a><a href="#about">Education</a><a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Vempati Nitin</h1>
+    <p class="lead">Backend-focused software engineer. I build secure APIs, real-time systems and AI tools that stay fast under load.</p>
+    <div class="links">
+      <a class="btn main" href="mailto:vempati.nitin7@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/nitin833">GitHub</a>
+      <a class="btn" href="https://in.linkedin.com/in/nitin-vempati-b8439528a">LinkedIn</a>
+      <a class="btn" href="https://leetcode.com/nitin_v2005">LeetCode</a>
+    </div>
+    <div class="stats">
+      <div><b>800+</b>DSA problems solved</div>
+      <div><b>1634</b>peak LeetCode rating</div>
+      <div><b>8.39</b>CGPA at IIIT Sri City</div>
+    </div>
+  </header>
+</div>
+
+<section style="border-top:0;padding-top:1rem">
+  <div class="wrap">
+    <div class="demo">
+      <h2>What caching did for RestoConnect</h2>
+      <p>Redis cut API response time from nearly 2 seconds to milliseconds. Flip the switch to see the difference.</p>
+      <div class="toggle" role="group" aria-label="Cache mode">
+        <button type="button" id="off" aria-pressed="true">Without Redis</button>
+        <button type="button" id="on" aria-pressed="false">With Redis</button>
+      </div>
+      <div class="track"><div class="bar" id="bar"></div></div>
+      <div class="readout"><span id="label">Database query every request</span><span id="ms">~2000 ms</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Projects</h2>
+
+    <article class="proj">
+      <h3>RestoConnect</h3>
+      <div class="stack">React, Redux Toolkit, Node.js, Express.js, MongoDB, Redis, JWT</div>
+      <p>A restaurant platform for food ordering, restaurant browsing and table reservations.</p>
+      <ul>
+        <li>Built secure REST APIs with JWT authentication and role-based authorization.</li>
+        <li>Added Redis caching that brought response time from nearly 2 seconds down to milliseconds.</li>
+        <li>Managed cart and login state with Redux Toolkit.</li>
+        <li>Sped up MongoDB reads with indexing.</li>
+      </ul>
+      <div class="pl"><a href="https://restoconnect.vercel.app">Live demo</a><a href="https://github.com/nitin833/RestoConnect">Source code</a></div>
+    </article>
+
+    <article class="proj">
+      <h3>TeleMedical</h3>
+      <div class="stack">React, Spring Boot, Node.js, MongoDB, SQL, Spring Security, JWT, Spring Cache</div>
+      <p>A role-based healthcare platform for appointments, consultations and prescriptions.</p>
+      <ul>
+        <li>Built Spring Boot services secured with Spring Security and JWT.</li>
+        <li>Used Spring Cache to avoid repeated database calls.</li>
+        <li>Wrote real-time chat and medical document sharing in Node.js.</li>
+        <li>Paired SQL for structured records with MongoDB for flexible data.</li>
+      </ul>
+      <div class="pl"><a href="https://github.com/nitin833/telemedical">Source code</a></div>
+    </article>
+
+    <article class="proj">
+      <h3>MedAI</h3>
+      <div class="stack">Python, Streamlit, LangChain, LangGraph, Qdrant, Sentence Transformers, Hugging Face</div>
+      <p>A medical assistant that answers questions from a curated knowledge base using retrieval-augmented generation (RAG).</p>
+      <ul>
+        <li>Created embeddings with Sentence Transformers and searched them with Qdrant.</li>
+        <li>Used LangGraph workflows to coordinate retrieval and LLM answers.</li>
+      </ul>
+      <div class="pl"><a href="https://github.com/nitin833/medai">Source code</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <dl>
+      <dt>Languages</dt><dd>Java, Python, JavaScript, SQL, HTML/CSS</dd>
+      <dt>Backend</dt><dd>Spring Boot, Node.js, Express.js, REST APIs, JWT, Spring Security, Socket.IO, multi-threading</dd>
+      <dt>Frontend</dt><dd>React, Redux Toolkit</dd>
+      <dt>Databases</dt><dd>MongoDB, MySQL, Redis</dd>
+      <dt>AI and ML</dt><dd>Scikit-learn, LLM integration, LangChain, LangGraph, RAG</dd>
+      <dt>Cloud and tools</dt><dd>AWS, Docker, Git</dd>
+      <dt>Core CS</dt><dd>Data structures and algorithms, DBMS, operating systems, computer networks, system design</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>Education and recognition</h2>
+    <div class="two">
+      <div>
+        <h3>IIIT Sri City</h3>
+        <p>B.Tech in Computer Science and Engineering, 2023–2027</p>
+        <p>CGPA 8.39/10</p>
+        <p>Coursework: Data Structures, Operating Systems, DBMS, Computer Networks, Full Stack Development, Machine Learning, Deep Learning</p>
+      </div>
+      <div>
+        <h3>Certifications</h3>
+        <ul>
+          <li>NPTEL, Joy of Computing using Python: top 1% of candidates (<a href="https://drive.google.com/file/d/1CZFvW49Cgq58w2dreiIl-8K9X1xALZPM/view">certificate</a>)</li>
+          <li>NPTEL, Introduction to Large Language Models: top 5% of candidates (<a href="https://drive.google.com/file/d/1NorlfIZPaN2y7mKinZCjBTzlL0PJI8FA/view">certificate</a>)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's work together</h2>
+    <p>I'm looking for backend and full stack roles. The fastest way to reach me is email.</p>
+    <div class="links">
+      <a class="btn main" href="mailto:vempati.nitin7@gmail.com">vempati.nitin7@gmail.com</a>
+      <a class="btn" href="tel:+919491679294">+91 94916 79294</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var bar=document.getElementById('bar'),on=document.getElementById('on'),off=document.getElementById('off'),
+      ms=document.getElementById('ms'),label=document.getElementById('label');
+  function set(cached){
+    on.setAttribute('aria-pressed',cached);off.setAttribute('aria-pressed',!cached);
+    bar.className='bar'+(cached?' fast':'');
+    bar.style.width=cached?'2%':'100%';
+    ms.textContent=cached?'~10 ms':'~2000 ms';
+    label.textContent=cached?'Served from Redis cache':'Database query every request';
+  }
+  on.onclick=function(){set(true)};off.onclick=function(){set(false)};
+})();
+</script>
+</body>
+</html>
